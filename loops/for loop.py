@@ -3,7 +3,7 @@ todos = []
 while True:
     user_action = input("Type add, show, edit or exit: ")
     user_action = user_action.strip() # if add has trailing space then its stripped
-    match user_action:
+    match user_action: # it will redirect the user to the case depending on what the case is
         case 'add':  # if value of the variable == 'add'
             todo = input("Enter a to do: ")  # do this input
             todos.append(todo)

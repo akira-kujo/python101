@@ -5,4 +5,4 @@ for index, item in enumerate(waiting_list):
     row = f"{index + 1}.{item.capitalize()}"
     print(row)
 
-
+# enumerate creates objects as tuples when func is used
