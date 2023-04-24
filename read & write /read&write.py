@@ -21,14 +21,33 @@ while True:
             todos = file.readlines()
             file.close()
 
-            for index, item in enumerate(todos):
-                new_var = f"{index + 1}.{item}"
-                print(new_var)
+            # new_todos = []
+            # for item in todos:
+            #     new_item = item.strip('\n')
+            #     new_todos.append(new_item) # new items is appended into new_todos
+
+            new_todos = [item.strip('\n') for item in todos] # for item in todos, store item.strip into the new_todos list
+
+            for index, item in enumerate(new_todos):
+                row = f"{index + 1}.{item}"
+                print(row)
+
         case 'edit':
             number = int(input("Number of items in todo to edit: "))
+            file = open('../loops/todos.txt', 'r')
+            todos = file.readlines()
+            file.close()
+
             number = number - 1
-            new_todo = input("Enter new to do:")
+            new_todo = input("Enter new to do:") + "\n"
             todos[number] = new_todo
+
+            todos.append(new_todo)
+
+            file = open('../loops/todos.txt', 'w')
+            file.writelines(new_todo) # open in write mode, replacing the previous content with the new_todo input
+            file.close()
+
         case 'exit':
             break
 
