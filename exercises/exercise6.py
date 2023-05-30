@@ -9,18 +9,20 @@
 # print(len(content))
 
 
-# enter_name = input("please enter a new member: ") + "\n" # grab item / name from user
-# file_read = open("members.txt", "r") # open the file in read mode
-# members_list = file_read.readlines()  # read the content of the file members.txt and create a list
-# print(members_list)
+enter_name = input("please enter a new member: ") + "\n" # grab item / name from user
+file_read = open("members.txt", "r") # open the file in read mode
+members_list = file_read.readlines()  # read the content of the file members.txt and create a list
+print(members_list)
 #
 #
-# members_list.append(enter_name) # add the items from input (enter_name) into the list (members_list) and save it
-#
-#
-# file_write = open("members.txt", "w") # this will overwrite and create a new file
-# file_write.writelines(members_list) # the contents of this file will have the contents of the list
-# file_write.close()
+members_list.append(enter_name) # add the items from input (enter_name) into the list (members_list) and save it
+
+
+file_write = open("members.txt", "w") # this will overwrite and create a new file
+file_write.writelines(members_list) # the contents of this file will have the contents of the list
+file_write.close()
+print("The new list is:")
+print(members_list)
 
 # text_file1 = open("a.txt", "b.txt" "r")
 # text_file2 = open("b.txt", "r")
