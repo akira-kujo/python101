@@ -6,17 +6,17 @@ while True:
         case 'add':
             todo = input("Enter a to do: ") + "\n"
 
-            with open('todos.txt', 'r') as file: # open file in read mode
+            with open('../write & open/todos.txt', 'r') as file: # open file in read mode
                 todos = file.readlines()
 
             todos.append(todo)  # append the info to the .txt file
 
-            with open('todos.txt', 'w') as file:  # write into file
+            with open('../write & open/todos.txt', 'w') as file:  # write into file
                 todos = file.writelines(todos)
 
         case 'show':
 
-            with open('todos.txt', 'r') as file:
+            with open('../write & open/todos.txt', 'r') as file:
                 todos = file.readlines()
 
             new_todos = []
@@ -36,25 +36,25 @@ while True:
             number = int(input("Number of items in todo to edit: "))
             number = number - 1
 
-            with open('todos.txt', 'r') as file:
+            with open('../write & open/todos.txt', 'r') as file:
                 todos = file.readlines()
 
             new_todo = input("Enter new to do: ")
             todos[number] = new_todo + '\n'
 
-            with open('todos.txt', 'w') as file:
+            with open('../write & open/todos.txt', 'w') as file:
                 todos = file.writelines(todos)
 
         case 'complete':
             number = int(input("Number of the todos to complete: "))
 
-            with open('todos.txt', 'r') as file:
+            with open('../write & open/todos.txt', 'r') as file:
                 todos = file.readlines()
             index = number - 1 # pop in index according to number listing
             todo_to_remove = todos[index] # read the index placement in todos.txt
             todos.pop(index) # code to remove it
 
-            with open('todos.txt', 'w') as file:
+            with open('../write & open/todos.txt', 'w') as file:
                 file.writelines(todos) # write into list and remove it
 
             message = f"{todo_to_remove} was removed from the list"
