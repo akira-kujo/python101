@@ -1,10 +1,10 @@
-rate = 0.95
-dollars = float(input("How many dollars do you have?"))
-euros = dollars * rate
-print(f"The amount in euros is: €{euros} ")
+# rate = 0.95
+# dollars = float(input("How many dollars do you have?"))
+# euros = dollars * rate
+# print(f"The amount in euros is: €{euros} ")
 
 
-# ranking = ['John', 'Sen', 'Lisa']
+ranking = ['John', 'Sen', 'Lisa']
 #
 # # choose_ranking = int(input("Enter rank number: ")) # enter rank number input
 # # choose_ranking = choose_ranking - 1

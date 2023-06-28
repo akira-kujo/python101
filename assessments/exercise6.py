@@ -1,4 +1,4 @@
-# file = open("./essay.txt", "r")
+# file = open("essay.txt", "r")
 # content = file.read()
 # print(content.title())
 
